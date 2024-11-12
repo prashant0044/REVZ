@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Service Delhi</title>
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="CSS/services.css">
+    <link rel="stylesheet" href="CSS/tyres.css">
+    <link rel="stylesheet" href="CSS/login_signup.css">
+</head>
+
+<body>
+    <main>
+        <nav class="navbar">
+            <div class="nav-left">
+                <div class="menu-icon" id="menuIcon">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <div class="logo"><img src="images/Re.png" alt="" class="logo"></div>
+            </div>
+            <div class="nav-right">
+                <a href="index.html">Home</a>
+                <a href="memberships.html">Membership</a>
+                <a href="#try-free" id="tryFreeLink">Try Free</a>
+                <div class="profile-dropdown">
+                    <button onclick="toggleDropdown()" class="profile-icon"><img src="images/icons8-user-30.png" alt=""></button>
+                    <div id="dropdownMenu" class="dropdown-content">
+                        <a href="#">My Profile</a>
+                        <a href="" onclick="event.preventDefault(); showLoginPane()">Sign In</a>
+                        <a href="" onclick="event.preventDefault(); showSignupPane()">Sign Up</a>
+                        <a href="#">Logout</a>
+                    </div>
+                </div>
+                  
+            </div>
+        </nav>
+
+
+        <div class="hero">
+            <div class="hero-content">
+                <!-- <h1>Bike Service In Delhi</h1> -->
+                <h1>Tyres</h1>
+                <!-- <p>Get Hassle Free and professional Bike services, Bike Repair, Bike 24/7 HELP</p> -->
+            </div>
+        </div>
+        <!-- login and signup -->
+        <div class="model" id="loginPane">
+            <div class="model-content">
+                <span class="close" onclick="closeModel('loginPane')">&times;</span>
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <input type="text" id="loginUsername" placeholder="Username" required>
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <p class="switch" onclick="showSignupPane()">Don't have an account? Sign up</p>
+            </div>
+        </div>
+        
+        <!-- Signup Pane -->
+        <div class="model" id="signupPane">
+            <div class="model-content">
+                <span class="close" onclick="closeModel('signupPane')">&times;</span>
+                <h2>Sign Up</h2>
+                <form id="signupForm">
+                    <input type="text" id="signupUsername" placeholder="Username" required>
+                    <input type="email" id="signupEmail" placeholder="Email" required>
+                    <input type="password" id="signupPassword" placeholder="Password" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+                <p class="switch" onclick="showLoginPane()">Already have an account? Log in</p>
+            </div>
+        </div>
+        <!-- trials section -->
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal" id="tryFreeModal">
+            <div class="modal-header">
+                <h2 class="modal-title">Start Your Free Trial</h2>
+                <button class="close-modal" id="closeModal">&times;</button>
+            </div>
+
+            <form id="trialForm">
+                <div class="form-group">
+                    <label class="form-label" for="name">Full Name</label>
+                    <input type="text" id="name" class="form-input" required>
+                    <div class="error-message" id="nameError">Please enter your full name</div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="phone">Phone Number</label>
+                    <input type="tel" id="phone" class="form-input" required>
+                    <div class="error-message" id="phoneError">Please enter a valid phone number</div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="bikeModel">Bike Model</label>
+                    <input type="text" id="bikeModel" class="form-input" required>
+                    <div class="error-message" id="bikeError">Please enter your bike model</div>
+                </div>
+
+                <ul class="benefits-list">
+                    <li>7 Days of Free Premium Service</li>
+                    <li>24/7 Roadside Assistance</li>
+                    <li>Free Basic Bike Inspection</li>
+                    <li>Access to Emergency Support</li>
+                </ul>
+
+                <button type="submit" class="submit-btn">Start Free Trial</button>
+
+                <p class="trial-terms">
+                    By starting your free trial, you agree to our Terms of Service and Privacy Policy
+                </p>
+            </form>
+        </div>
+        <!-- left sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-content">
+                <a href="index.html">Home</a>
+                <a href="periodic_services.html">Services</a>
+                <a href="#about">About</a>
+                <a href="#footer">Contact</a>
+            </div>
+        </div>
+
+
+
+
+
+
+        <header class="header">
+            <h1>Premium Motorcycle <span class="highlight">Tyres</span></h1>
+            <p>Quality and Performance for Every Ride</p>
+        </header>
+
+        <div class="container">
+            <div class="tyre-grid">
+                <div class="tyre-card">
+                    <img src="images/sports.jpeg" alt="Sport Tyre" class="tyre-image">
+                    <h3 class="tyre-name">SportMax GP Pro</h3>
+                    <p>High-performance sport tyre</p>
+                    <p class="tyre-price">Rs7999</p>
+                    <button class="buy-button">Buy Now</button>
+                </div>
+
+                <div class="tyre-card">
+                    <img src="images/all season.png" alt="Touring Tyre" class="tyre-image">
+                    <h3 class="tyre-name">RoadTech GT</h3>
+                    <p>All-season touring tyre</p>
+                    <p class="tyre-price">Rs15000</p>
+                    <button class="buy-button">Buy Now</button>
+                </div>
+
+                <div class="tyre-card">
+                    <img src="images/racing.jpeg" alt="Racing Tyre" class="tyre-image">
+                    <h3 class="tyre-name">RacePro X</h3>
+                    <p>Professional racing tyre</p>
+                    <p class="tyre-price">Rs21000</p>
+                    <button class="buy-button">Buy Now</button>
+                </div>
+
+                <div class="tyre-card">
+                    <img src="images/adventure.jpeg" alt="Adventure Tyre" class="tyre-image">
+                    <h3 class="tyre-name">TrailBlazer AT</h3>
+                    <p>Adventure touring tyre</p>
+                    <p class="tyre-price">Rs16000</p>
+                    <button class="buy-button">Buy Now</button>
+                </div>
+
+                <div class="tyre-card">
+                    <img src="images/cruiser.jpeg" alt="Cruiser Tyre" class="tyre-image">
+                    <h3 class="tyre-name">CruiseComfort Pro</h3>
+                    <p>Premium cruiser tyre</p>
+                    <p class="tyre-price">Rs14000</p>
+                    <button class="buy-button">Buy Now</button>
+                </div>
+
+                <div class="tyre-card">
+                    <img src="images/street.jpeg" alt="Street Tyre" class="tyre-image">
+                    <h3 class="tyre-name">StreetMaster Elite</h3>
+                    <p>Street performance tyre</p>
+                    <p class="tyre-price">Rs13000</p>
+                    <button class="buy-button">Buy Now</button>
+                </div>
+
+                <div class="tyre-card">
+                    <img src="images/sports touring.png" alt="Sport Touring Tyre" class="tyre-image">
+                    <h3 class="tyre-name">TourSport RS</h3>
+                    <p>Sport touring tyre</p>
+                    <p class="tyre-price">Rs15000</p>
+                    <button class="buy-button">Buy Now</button>
+                </div>
+
+                <div class="tyre-card">
+                    <img src="images/track.jpeg" alt="Track Day Tyre" class="tyre-image">
+                    <h3 class="tyre-name">TrackDay Pro</h3>
+                    <p>Track day specialist tyre</p>
+                    <p class="tyre-price">Rs25000</p>
+                    <button class="buy-button">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <!-- footer section -->
+        <footer class="footer" id="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>📞 24/7 Helpline: +91 XXXXX XXXXX</li>
+                        <li>📧 Email: support@revz.in</li>
+                        <li>📍 Delhi, India</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="periodic_services.html">Services</a></li>
+                        <li><a href="memberships.html">Membership</a></li>
+                        <li><a href="periodic_services.html">Book Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="/terms">Terms & Conditions</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/refund">Refund Policy</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 RevZ Bike Service. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <button class="sos-button" id="sosBtn">SOS</button>
+    <script src="JS/home.js"></script>
+    <script src="JS/Login_and_signup.js"></script>
+    <script>
+        // Add Font Awesome for social icons
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css';
+        document.head.appendChild(link);
+    </script>
+    <script>
+        document.querySelectorAll('.select-plan-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                const planName = this.closest('.plan-card').querySelector('.plan-name').textContent;
+                alert(`Thank you for selecting the ${planName}! We'll redirect you to the payment page.`);
+            });
+        });
+
+        // Add animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.plan-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s ease-out';
+            observer.observe(card);
+        });
+    </script>
+    </main>
+</body>
+
+</html>

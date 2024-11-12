@@ -1,0 +1,99 @@
+.battery-grid {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.battery-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.battery-card:hover {
+    transform: translateY(-5px);
+}
+
+.battery-logo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    padding: 1rem;
+    background-color: var(--light-gray);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.battery-logo img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.battery-name {
+    font-size: 1.4rem;
+    color: var(--dark-gray);
+    margin-bottom: 0.5rem;
+}
+
+.battery-price {
+    font-size: 1.8rem;
+    color: var(--dark-gray);
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.features-list {
+    text-align: left;
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.features-list li {
+    color: var(--medium-gray);
+    margin-bottom: 0.5rem;
+}
+
+.cta-button {
+    background-color: var(--primary-yellow);
+    color: var(--dark-gray);
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.cta-button:hover {
+    background-color: #FFE44D;
+}
+
+.warranty-badge {
+    background-color: var(--primary-yellow);
+    color: var(--dark-gray);
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .battery-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,94 @@
+
+
+
+
+/* Services Section */
+.services {
+    padding: 40px;
+    text-align: center;
+}
+
+.services h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service-item {
+    background-color: #fff;
+    border: 2px solid #ffc107;
+    padding: 20px;
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    color: #333;
+}
+
+.service-item h3 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Booking Section */
+.booking {
+    background-color: #ffc107;
+    padding: 40px;
+    text-align: center;
+}
+
+.booking h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.booking form {
+    display: inline-block;
+    text-align: left;
+}
+
+.booking label {
+    font-weight: bold;
+    color: #333;
+}
+
+.booking input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.booking button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.booking button:hover {
+    background-color: #555;
+}
+
+#confirmationMessage {
+    color: #333;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
