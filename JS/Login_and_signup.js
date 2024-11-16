@@ -21,7 +21,7 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
     const username = document.getElementById('loginUsername').value;
     const password = document.getElementById('loginPassword').value;
 
-    if (username && password) {
+    if (username=='rana' && password=='123') {
         alert('Login successful');
         closeModel('loginPane');
     } else {

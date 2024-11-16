@@ -27,17 +27,45 @@
       <!-- <div class="profile-icon" onclick="toggleSidebar()"><img src="images/icons8-user-30.png" alt="👤"
           class="profile-icon"></div>
     </div> -->
-    <div class="profile-dropdown">
-      <button onclick="toggleDropdown()" class="profile-icon"><img src="images/icons8-user-30.png" alt=""></button>
-      <div id="dropdownMenu" class="dropdown-content">
+      <div class="profile-dropdown">
+        <button onclick="toggleDropdown()" class="profile-icon"><img src="images/icons8-user-30.png" alt=""></button>
+        <div id="dropdownMenu" class="dropdown-content">
           <a href="#">My Profile</a>
           <a href="" onclick="event.preventDefault(); showLoginPane()">Sign In</a>
           <a href="" onclick="event.preventDefault(); showSignupPane()">Sign Up</a>
           <a href="#">Logout</a>
+        </div>
       </div>
-  </div>
-    
+
   </nav>
+  <!-- login and signup -->
+  <div class="model" id="loginPane">
+    <div class="model-content">
+      <span class="close" onclick="closeModel('loginPane')">&times;</span>
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="text" id="loginUsername" placeholder="Username" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+      <p class="switch" onclick="showSignupPane()">Don't have an account? Sign up</p>
+    </div>
+  </div>
+
+  <!-- Signup Pane -->
+  <div class="model" id="signupPane">
+    <div class="model-content">
+      <span class="close" onclick="closeModel('signupPane')">&times;</span>
+      <h2>Sign Up</h2>
+      <form id="signupForm">
+        <input type="text" id="signupUsername" placeholder="Username" required>
+        <input type="email" id="signupEmail" placeholder="Email" required>
+        <input type="password" id="signupPassword" placeholder="Password" required>
+        <button type="submit">Sign Up</button>
+      </form>
+      <p class="switch" onclick="showLoginPane()">Already have an account? Log in</p>
+    </div>
+  </div>
   <!-- trials section -->
   <div class="modal-overlay" id="modalOverlay"></div>
   <div class="modal" id="tryFreeModal">
@@ -79,34 +107,7 @@
       </p>
     </form>
   </div>
-  <!-- login and signup -->
-  <div class="model" id="loginPane">
-    <div class="model-content">
-        <span class="close" onclick="closeModel('loginPane')">&times;</span>
-        <h2>Login</h2>
-        <form id="loginForm">
-            <input type="text" id="loginUsername" placeholder="Username" required>
-            <input type="password" id="loginPassword" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
-        <p class="switch" onclick="showSignupPane()">Don't have an account? Sign up</p>
-    </div>
-</div>
 
-<!-- Signup Pane -->
-<div class="model" id="signupPane">
-    <div class="model-content">
-        <span class="close" onclick="closeModel('signupPane')">&times;</span>
-        <h2>Sign Up</h2>
-        <form id="signupForm">
-            <input type="text" id="signupUsername" placeholder="Username" required>
-            <input type="email" id="signupEmail" placeholder="Email" required>
-            <input type="password" id="signupPassword" placeholder="Password" required>
-            <button type="submit">Sign Up</button>
-        </form>
-        <p class="switch" onclick="showLoginPane()">Already have an account? Log in</p>
-    </div>
-</div>
   <!-- left sidebar -->
   <div class="sidebar" id="sidebar">
     <div class="sidebar-content">
@@ -129,19 +130,27 @@
       <div class="services-grid">
         <div class="service-item">
           <img src="images/1-removebg-preview.png" alt="Periodic Service">
-          <a href="periodic_services.html"><p>Periodic Service</p></a>
+          <a href="periodic_services.html">
+            <p>Periodic Service</p>
+          </a>
         </div>
         <div class="service-item">
           <img src="images/2-removebg-preview.png" alt="Batteries">
-          <a href="batteries.html"><p>Batteries</p></a>
+          <a href="batteries.html">
+            <p>Batteries</p>
+          </a>
         </div>
         <div class="service-item">
           <img src="images/3-removebg-preview.png" alt="Tyres">
-          <a href="tyres.html"><p>Tyres</p></a>
+          <a href="tyres.html">
+            <p>Tyres</p>
+          </a>
         </div>
         <div class="service-item">
           <img src="images/4-removebg-preview.png" alt="Wheel Care">
-          <a href="wheelcare.html"><p>Wheel Care</p></a>
+          <a href="wheelcare.html">
+            <p>Wheel Care</p>
+          </a>
         </div>
         <div class="service-item">
           <img src="images/5-removebg-preview.png" alt="Basic Repair">
@@ -152,11 +161,15 @@
       <div class="services-grid secondary">
         <div class="service-item">
           <img src="images/7-removebg-preview.png" alt="Bike Cleaning">
-          <a href="bike_cleaning.html"><p>Bike Cleaning and Spa</p></a>
+          <a href="bike_cleaning.html">
+            <p>Bike Cleaning and Spa</p>
+          </a>
         </div>
         <div class="service-item">
           <img src="images/6-removebg-preview.png" alt="Suspension">
-          <a href="suspension.html"><p>Suspension</p></a>
+          <a href="suspension.html">
+            <p>Suspension</p>
+          </a>
         </div>
         <div class="service-item">
           <img src="images/8-removebg-preview.png" alt="Insurance">
@@ -227,22 +240,28 @@
       <div class="reviews-container">
         <div class="review-card">
           <!-- <h2>Review 1</h2> -->
-          <p>"Revz saved me when I needed it most! I got a flat tire in the middle of nowhere at midnight, and within 15 minutes, a mechanic was on his way. The app was super easy to use, and the service was quick and reliable. Highly recommend to all bikers!"</p>
+          <p>"Revz saved me when I needed it most! I got a flat tire in the middle of nowhere at midnight, and within 15
+            minutes, a mechanic was on his way. The app was super easy to use, and the service was quick and reliable.
+            Highly recommend to all bikers!"</p>
         </div>
         <div class="review-card">
           <!-- <h2>Review 1</h2> -->
-           <p>“Fantastic service for bikers! I had to use Revz twice in the past month—once for a low battery and another time for a flat tire. Both times, the mechanics were efficient and friendly. The response times are great, and the app’s interface is straightforward.”</p>
+          <p>“Fantastic service for bikers! I had to use Revz twice in the past month—once for a low battery and another
+            time for a flat tire. Both times, the mechanics were efficient and friendly. The response times are great,
+            and the app’s interface is straightforward.”</p>
         </div>
         <div class="review-card">
           <!-- <h2>Review 1</h2> -->
-           <p>"Super convenient and reassuring! As a new biker, I sometimes worry about getting stranded, especially at night. Revz has helped me twice already, and both times I felt well taken care of. I’m recommending it to all my friends.”</p>
+          <p>"Super convenient and reassuring! As a new biker, I sometimes worry about getting stranded, especially at
+            night. Revz has helped me twice already, and both times I felt well taken care of. I’m recommending it to
+            all my friends.”</p>
         </div>
       </div>
     </section>
 
     <!-- faq  -->
     <div class="faq-container">
-      <h1 class="faq-title heading-with-line" >Common Questions Asked by Customers</h1>
+      <h1 class="faq-title heading-with-line">Common Questions Asked by Customers</h1>
       <div class="faq-list">
         <div class="faq-item">
           <h2 class="faq-question">Question 1. What should I do if my motorbike breaks down in a remote location?</h2>
@@ -296,7 +315,8 @@
       <h2 class="section-title">Original Spare Parts</h2>
       <div class="brand-grid">
         <div class="brand-logo bosch">
-          <a href="https://www.bosch-pt.co.in/in/en/service/after-sales-service/online-spare-parts-service/"><img src="Brand logo/bosch.png" alt="Bosch" /></a>
+          <a href="https://www.bosch-pt.co.in/in/en/service/after-sales-service/online-spare-parts-service/"><img
+              src="Brand logo/bosch.png" alt="Bosch" /></a>
         </div>
         <div class="brand-logo royal-enfield">
           <a href="https://www.royalenfield.com/in/en/gma/"><img src="Brand logo/re1.webp" alt="Royal Enfield" /></a>
@@ -305,10 +325,13 @@
           <a href="https://www.bike-parts-honda.com/"><img src="Brand logo/honda.png" alt="Honda" /></a>
         </div>
         <div class="brand-logo tvs">
-          <a href="https://shop.tvsmotor.com/?srsltid=AfmBOooSUKDyKpxGaiPhdJnF8inWszMV247knHKpOhWbXCFTh68W4rtY"><img src="Brand logo/tvs.png" alt="TVS" /></a>
+          <a href="https://shop.tvsmotor.com/?srsltid=AfmBOooSUKDyKpxGaiPhdJnF8inWszMV247knHKpOhWbXCFTh68W4rtY"><img
+              src="Brand logo/tvs.png" alt="TVS" /></a>
         </div>
         <div class="brand-logo hhero">
-          <a href="https://shop.heromotocorp.com/en/collection/spare?srsltid=AfmBOooTkIAikwd7qrRsYaQFAqAR3CbPGsd5nsXVz_zCWjkqoNy4n3Zk"><img src="Brand logo/hero.png" alt="Hero" /></a>
+          <a
+            href="https://shop.heromotocorp.com/en/collection/spare?srsltid=AfmBOooTkIAikwd7qrRsYaQFAqAR3CbPGsd5nsXVz_zCWjkqoNy4n3Zk"><img
+              src="Brand logo/hero.png" alt="Hero" /></a>
         </div>
       </div>
     </section>
@@ -330,7 +353,7 @@
             <li><a href="/about">About Us</a></li>
             <li><a href="periodic_services.html">Services</a></li>
             <li><a href="memberships.html">Membership</a></li>
-            <li><a href="periodic_services.html" >Book Service</a></li>
+            <li><a href="periodic_services.html">Book Service</a></li>
           </ul>
         </div>
 
